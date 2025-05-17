@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moni & Raja Wedding Album</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            overflow-x: hidden;
+        }
+
+        .header {
+            text-align: center;
+            padding: 0; /* Removed top space */
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .header-slider {
+            display: flex;
+            width: 200%;
+            animation: scroll 20s linear infinite;
+        }
+
+        .header-slider img {
+            width: 33.33vw;
+            height: 250px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .header-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+            width: 100%;
+        }
+
+        .header-text h1 {
+            font-size: 3rem; /* Increased size */
+            font-weight: bold;
+            color: white;
+        }
+
+        .header-text p {
+            font-size: 1.5rem; /* Increased size */
+            color: white;
+        }
+
+        .rasam-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            color: white;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .rasam-card:hover,
+        .rasam-card.active {
+            transform: scale(1.08);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .rasam-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .rasam-card h5 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .header-text h1 {
+                font-size: 2rem;
+            }
+
+            .header-text p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <div class="header">
+            <div class="header-slider">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczOLeGS-tdL95Jurf_l9wSRy-8KpEehQ0IfGMfGuLNn1EMUXcvQTRe46vaHaJUruXFVg6o6wGmGrJVb1xpCy0_0vG5G3N4zrFhc5xBKYVGD0cm8U3SpDSDReKXRmMf7ALZTZ2KdT29pISf798iW1ELwx=w1429-h953-s-no-gm?authuser=0" alt="Wedding 1">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczMEzz3hhQmbjGca6MwkSOK2a-0N_hFpHTjnkW02JfFER2oevBXNpBKSVZSI5kN4wVMA2PTcGy_BND5sdTdsyHsIZksRDW0Aqx1LSA0tKlnNI4FMKj61p3qce4X5O-sj5msWG-Z0jwVOUxNmruTfMEbK=w1429-h953-s-no-gm?authuser=0" alt="Wedding 2">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczM9AUxvlQIxDjLonWBVTk6k91MvN6OcR_8OLgylUUqoLqjYuNymo8EK7N_apEYu2h0n4cAFPx0sFy-8-RtsTvOUlO3ntvIu4AOG9N-LsehVeMyNu9yJRqDaBjTXiGyAt09a02S6fWy2MnZzbDDo4Ng5=w1429-h953-s-no-gm?authuser=0" alt="Wedding 3">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczNhMwggIqeymTkD3CAflWT4hZxH_oTQfsKR7JY9ToJ1aDH57nowLADHbDOJGcJmgBfGaRtQpp0dBFffVk9N0rUzIA1BDtu_4M4mTKY1Nz53K_Zmwsz9KN7-MHkanGHWknDQ677ryPsMoJ8ciRZJnWOY=w1429-h953-s-no-gm?authuser=0" alt="Wedding 4">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczPYct2fQDIMFoaG83_OgPIon4-5UoXovSka4d2Eu94qvq1hJ2WhyO75rJoe9FEOvO7kcDEvuG33hOncjnEStgx7_Y-ALB-wEDckM6J3cIebE6UDP0w_MMiansdZA9BSo6SCEOTi76gHYeZxwCuDY1fl=w1429-h953-s-no-gm?authuser=0" alt="Wedding 5">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczMw8YY_ZpsI6NNzD44tX7yDVsXn_wx-5o1R9tdc2TpDCyrEwH8BGC-SS2dEb9O87U4ihhZfpafR_uyB4CALBaG2zn8vJsLccevn-RK6n44i7jT_SQF3BQRiZNmRpS-y5pwdCtutMBeIM2pvllx_ezBq=w1429-h953-s-no-gm?authuser=0" alt="Wedding 6">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczOV0bvD61mjfGVXRcF0xaZXr0LVm7bzI-2VF-Ucj63L2SUWVEVLPkCGZ8gEcEZaKE5RXw7QsXqDqolxSIAsTyHcpLfvaJAH3w-IQoPUnspQlTd2ycOV9Lc3eeJQFnwEtjV7dL3Fdjvw8fIfLElWg_7f=w1429-h953-s-no-gm?authuser=0" alt="Wedding 7">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczNmI8t0QZeONQQiV8E-Bvf9x-6f4J4sVgFXgeB8skKSW2kRhoRS4QoM_gii1Q_4O-u7jBEmsDMCwRhG1QbMTv9use8lQmu7qjwllss_HWLuZEXaM2Lg8O-Kw9JJqd4vzmJX0Bv3G-LcUKQbmCRaAozN=w1429-h953-s-no-gm?authuser=0" alt="Wedding 8">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczM0JwSUe1dh3evbCoK2y30e8oek7CapGCIkJJ6njtnbS8qjAjREhGnZozOtvrID2I46YClItAoCBCzqIbxff-a7k0YtFqXIRN5_QNnWoejxYbGnaRvFeoBJf1_h0GP2VwWHZn_lHt3aWcf12C-ccNEF=w1429-h953-s-no-gm?authuser=0" alt="Wedding 9">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczObIjrw-OrEzUkD9DvfcYYXM0BEym22aG8ESGzLMQoJvKg2sRwN7ZBYUE7HPvwc-B78iJEYONyoXKZ_Y8-Akr_oyk4vqtng85YqUTvA-FCS30HXM_3WfT--6BI_admqfYW3hykPxjOZvTe6YNaNNFWH=w1429-h953-s-no-gm?authuser=0" alt="Wedding 10">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczOicuy7qnCo2RAMIBj0bEXYrYLDfRi65eCWl9TkLdQR0Mu5i2sLmQCjZO9OJYMHoPqqKoqUiUmV9tK4vS735EseLn_FNmezpGKXSVZOuLs6YDkixDVT-kQpYCnLLFDFBvbyV5mSDmy-F9wIDygycdTT=w1429-h953-s-no-gm?authuser=0" alt="Wedding 11">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczMH2OUR5mWpful7ZAW8LGf1IfB2gI_hexjgnktPvvYBGepgRUaNkJp0SN70DG1LyUlbdtNrp5zxAjiJjzMF8PCJVXdrk8OZNESc5rLo9U6Pm3fhwMLGHsuSH04fGKwAcA3qLhIT2_asHi6QCzer7AdJ=w1429-h953-s-no-gm?authuser=0" alt="Wedding 12">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczPxCoIpx1ZKbaDYkYi131pd79vathJ2siWw8MxfOeyYWv9wajVMEIhkzwSJt1-KkK3b9sfAgvI142zM1mo01d54-df07-vr2ejegQ7fHM4qj1zUpi17EhdnqGfeMdujgKgAUyABm-UcGz5x1C6u3_Eq=w1429-h953-s-no-gm?authuser=0" alt="Wedding 13">
+            </div>
+            <div class="header-text">
+                <h1>Himanshu Weds Aarti Wedding Album</h1>
+                <p>Click on a rasam to view the cherished memories!</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container mt-5">
+        <div class="row">
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const rasams = [
+                        { name: "Tilak", img: "https://lh3.googleusercontent.com/pw/AP1GczPuhsOQXD1aPvKxmSbpwbzmqHB8FDuO6BWsNXs7OkJfAruPCRolqwO4RT2u_60ohotzcTQZpRf0NDPpzGmY7VAhVKi9jtgqq9wBFJjVzW4LJFKuleMdZiDtdZXGindepNpKcujMnoVWGilk0sPuHdWg=w1429-h953-s-no-gm?authuser=0", link: "https://photos.app.goo.gl/ozg9hdXbKDWXRVeo8" },
+                        { name: "Reception", img: "https://lh3.googleusercontent.com/pw/AP1GczNNu2MapxX8UIDi13x8ucyQqcIly_qc3tkEs5-TKRC2xkcYLQKk4gfFXRjVQ8XCq2UhlXd9Y4CSTGMGopr_BbskvrPn6HUTE7gqjOXKO8PJzoiXzdBYGI9yqGaEupsSd-4bUDREYheJkAlnAX23Bzos=w1429-h953-s-no-gm?authuser=0", link: "https://photos.app.goo.gl/CJsPhwCJ1FQ81fKQ8" },
+                        { name: "Shaadi", img: "https://lh3.googleusercontent.com/pw/AP1GczMYu2xTRPQ63gZCIIuVzzAKmbQ9M4qUUWuPX5qI4JYLP5TSMdCwvQrkjQYKUwUMahXtiFQdGcdNeYJIPnRqdU3720UzqW785WVKFqxFC1MISqsDh-3PHgvpkXFtbhKMZTqCl231IULD6npT8nTPBvHk=w1429-h953-s-no-gm?authuser=0", link: "https://photos.app.goo.gl/gFJKB7yZUx3xwj7U9" }
+                    ];
+                    
+                    const rowContainer = document.querySelector(".row");
+
+                    rasams.forEach(rasam => {
+                        const rasamCard = document.createElement("div");
+                        rasamCard.classList.add("col-md-4", "col-sm-6", "mb-4");
+                        rasamCard.innerHTML = `
+                            <div class="card rasam-card shadow-lg" style="background: url('${rasam.img}') no-repeat center center/cover;">
+                                <h5>${rasam.name}</h5>
+                                <a href="${rasam.link}" target="_blank" class="stretched-link"></a>
+                            </div>
+                        `;
+                        rowContainer.appendChild(rasamCard);
+                    });
+
+                    document.querySelectorAll(".rasam-card").forEach(card => {
+                        card.addEventListener("touchstart", function() {
+                            this.classList.add("active");
+                            setTimeout(() => this.classList.remove("active"), 300);
+                        });
+                    });
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>
